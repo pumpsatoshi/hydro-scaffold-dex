@@ -18,10 +18,10 @@ services:
     container_name: hydro-scaffold-dex-ethereum-node
     image: hydroprotocolio/hydro-scaffold-dex-ethereum-node:latest
     command: hydro-scaffold-dex-ethereum-node --defaultBalanceEther 200000000
-    environment:
-      CHAIN_ID: 2108
     ports:
       - 0.0.0.0:8545:8545
+    environment:
+      CHAIN_ID: 2108
     restart: always
     logging:
       <<: *logging_default
